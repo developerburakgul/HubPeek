@@ -7,15 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		234BC76E2BB9895900E32090 /* GithubProfilViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234BC76D2BB9895900E32090 /* GithubProfilViewController.swift */; };
 		23AED6622BB822C000006C7C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AED6612BB822C000006C7C /* AppDelegate.swift */; };
 		23AED6642BB822C000006C7C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AED6632BB822C000006C7C /* SceneDelegate.swift */; };
 		23AED6662BB822C000006C7C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AED6652BB822C000006C7C /* ViewController.swift */; };
 		23AED6692BB822C000006C7C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23AED6672BB822C000006C7C /* Main.storyboard */; };
 		23AED66B2BB822C200006C7C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23AED66A2BB822C200006C7C /* Assets.xcassets */; };
 		23AED66E2BB822C200006C7C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23AED66C2BB822C200006C7C /* LaunchScreen.storyboard */; };
+		23AED6762BB828C500006C7C /* FollowersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AED6752BB828C500006C7C /* FollowersViewController.swift */; };
+		23AED67C2BB8336400006C7C /* GithubUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AED67B2BB8336400006C7C /* GithubUser.swift */; };
+		23AED67F2BB835DA00006C7C /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AED67E2BB835DA00006C7C /* NetworkManager.swift */; };
+		23AED6812BB85E4E00006C7C /* Follower.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AED6802BB85E4E00006C7C /* Follower.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		234BC76D2BB9895900E32090 /* GithubProfilViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubProfilViewController.swift; sourceTree = "<group>"; };
 		23AED65E2BB822C000006C7C /* HubPeek.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HubPeek.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		23AED6612BB822C000006C7C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		23AED6632BB822C000006C7C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +30,10 @@
 		23AED66A2BB822C200006C7C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		23AED66D2BB822C200006C7C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		23AED66F2BB822C200006C7C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		23AED6752BB828C500006C7C /* FollowersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowersViewController.swift; sourceTree = "<group>"; };
+		23AED67B2BB8336400006C7C /* GithubUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubUser.swift; sourceTree = "<group>"; };
+		23AED67E2BB835DA00006C7C /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		23AED6802BB85E4E00006C7C /* Follower.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Follower.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,13 +68,42 @@
 			children = (
 				23AED6612BB822C000006C7C /* AppDelegate.swift */,
 				23AED6632BB822C000006C7C /* SceneDelegate.swift */,
-				23AED6652BB822C000006C7C /* ViewController.swift */,
-				23AED6672BB822C000006C7C /* Main.storyboard */,
+				23AED6772BB831A900006C7C /* Controller */,
+				23AED6782BB831C000006C7C /* View */,
 				23AED66A2BB822C200006C7C /* Assets.xcassets */,
 				23AED66C2BB822C200006C7C /* LaunchScreen.storyboard */,
 				23AED66F2BB822C200006C7C /* Info.plist */,
+				23AED67D2BB8350400006C7C /* Model */,
 			);
 			path = HubPeek;
+			sourceTree = "<group>";
+		};
+		23AED6772BB831A900006C7C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				23AED6652BB822C000006C7C /* ViewController.swift */,
+				23AED6752BB828C500006C7C /* FollowersViewController.swift */,
+				234BC76D2BB9895900E32090 /* GithubProfilViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		23AED6782BB831C000006C7C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				23AED6672BB822C000006C7C /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		23AED67D2BB8350400006C7C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				23AED67B2BB8336400006C7C /* GithubUser.swift */,
+				23AED67E2BB835DA00006C7C /* NetworkManager.swift */,
+				23AED6802BB85E4E00006C7C /* Follower.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +122,8 @@
 			dependencies = (
 			);
 			name = HubPeek;
+			packageProductDependencies = (
+			);
 			productName = HubPeek;
 			productReference = 23AED65E2BB822C000006C7C /* HubPeek.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +152,8 @@
 				Base,
 			);
 			mainGroup = 23AED6552BB822C000006C7C;
+			packageReferences = (
+			);
 			productRefGroup = 23AED65F2BB822C000006C7C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -138,8 +181,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23AED6762BB828C500006C7C /* FollowersViewController.swift in Sources */,
+				23AED6812BB85E4E00006C7C /* Follower.swift in Sources */,
+				234BC76E2BB9895900E32090 /* GithubProfilViewController.swift in Sources */,
 				23AED6662BB822C000006C7C /* ViewController.swift in Sources */,
+				23AED67F2BB835DA00006C7C /* NetworkManager.swift in Sources */,
 				23AED6622BB822C000006C7C /* AppDelegate.swift in Sources */,
+				23AED67C2BB8336400006C7C /* GithubUser.swift in Sources */,
 				23AED6642BB822C000006C7C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
