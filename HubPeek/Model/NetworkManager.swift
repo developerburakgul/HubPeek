@@ -6,51 +6,13 @@
 //
 
 import Foundation
-import UIKit
+import SwiftUI
 
 class NetworkManager {
     static let shared = NetworkManager()
     
     private let baseURL = "https://api.github.com/users/"
-    
-    func fetchUser(for username: String, completion: @escaping (Result<GithubUser, Error>) -> Void) {
-        let urlString = "https://api.github.com/users/\(username)"
         
-        guard let url = URL(string: urlString) else {
-            completion(.failure(NSError(domain: "", code: -1001, userInfo: [NSLocalizedDescriptionKey: "Invalid URL"])))
-            return
-        }
-        
-        let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
-            
-            
-            
-            if let error = error {
-                completion(.failure(error))
-                return
-            }
-            
-            
-            guard let data = data, let response = response as? HTTPURLResponse, response.statusCode == 200 else {
-                completion(.failure(NSError(domain: "", code: -1002, userInfo: [NSLocalizedDescriptionKey: "Invalid response"])))
-                return
-            }
-            
-            
-            do {
-                
-
-                let user = try JSONDecoder().decode(GithubUser.self, from: data)
-                
-                completion(.success(user))
-            } catch {
-                completion(.failure(error))
-            }
-        }
-        
-        task.resume()
-    }
-    
     func fetchFollowers(for username: String, completion: @escaping (Result<[Follower], Error>) -> Void) {
         
         let urlString = baseURL + "\(username)/followers"
